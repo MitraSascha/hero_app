@@ -1,0 +1,75 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --mitra-primary: #1a73e8;
+  --mitra-primary-dark: #1557b0;
+  --mitra-surface: #ffffff;
+  --mitra-bg: #f4f6f9;
+  --mitra-text: #212529;
+  --mitra-muted: #6c757d;
+  --mitra-radius: 12px;
+  --mitra-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--mitra-bg);
+  color: var(--mitra-text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Mobile-first: max. Breite für App-Container */
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--mitra-surface);
+  box-shadow: var(--mitra-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  border: none;
+  border-radius: var(--mitra-radius);
+  box-shadow: var(--mitra-shadow);
+}
+
+.btn-primary {
+  background-color: var(--mitra-primary);
+  border-color: var(--mitra-primary);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  &:hover, &:focus {
+    background-color: var(--mitra-primary-dark);
+    border-color: var(--mitra-primary-dark);
+  }
+}
+
+.btn-outline-primary {
+  color: var(--mitra-primary);
+  border-color: var(--mitra-primary);
+  border-radius: 8px;
+  font-weight: 600;
+  &:hover {
+    background-color: var(--mitra-primary);
+  }
+}
+
+.page-header {
+  padding: 1rem 1.25rem 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.spinner-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
